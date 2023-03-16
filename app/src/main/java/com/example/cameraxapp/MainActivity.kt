@@ -55,8 +55,7 @@ class MainActivity : AppCompatActivity() {
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
 
             // Preview
-            val previewConfig = PreviewConfig.Builder().build();
-            val preview = Preview.Builder(previewConfig).build().also {
+            val preview = Preview.Builder().build().also {
                 it.setSurfaceProvider(viewBinding.viewFinder.surfaceProvider)
             }
 
